@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="ChaiMaMa">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>ChaiMaMa</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+</head>
+
+<body class="my-login-page">
+    <section class="h-100">
+        <div class="row justify-content-md-center align-items-center h-100">
+            <div class="card-wrapper">
+                <div class="card fat">
+                    <div class="card-body">
+                        <div class = "brand" style="padding-right: 5px;">
+                            <svg id='logo' viewBox="0 0 34 34" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M7.8095 20.9911C7.8095 12.5848 15.2432 5.48451 25.9194 4.44997C27.846 4.26327 29.1218 2.86693 30.7606 2.50395C33.4216 1.91457 31.1331 1.76475 30.0434 2.47615C27.5775 4.08589 27.82 8.8239 27.82 11.4834C27.82 17.5778 24.7152 20.2529 16.8106 21.0189C13.4102 21.3484 9.45157 22.6191 6.5185 23.8823C2.4938 25.6157 2 28.6389 2 32"
+                                    stroke="#bac5c4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <form id="login_form" onsubmit="authenticateUser(); return false;" method="post">
+                            <div class= "form-group">
+                                <label for="username">Username</label>
+                                <input id="username" type="text" class="form-control" name="username" value="" required
+                                    autofocus>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="password">Password
+                                    <!-- TODO: Add routes for Forgot password -->
+                                    <a href="/reset_password" class="float-right link">Forgot Password?</a>
+                                </label>
+                                <input id="password" type="password" class="form-control" name="password" required
+                                    data-eye>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="custom-checkbox custom-control">
+                                    <input type="checkbox" name="remember" id="remember" class="custom-control-input">
+                                    <label for="remember" class="custom-control-label">Remember Me</label>
+                                </div>
+                            </div>
+
+                            <div class="form-group m-0">
+                                <button type="submit" class="btn btn-block">
+                                    Login
+                                </button>
+                            </div>
+                            <div class="mt-4 text-center">
+                                Don't have an account? <a href="/register" class="link">Create One</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="footer">
+                    Copyright &copy; 2021 &mdash; ChaiMaMa
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="/js/login.js"></script>
+</body>
+
+</html>

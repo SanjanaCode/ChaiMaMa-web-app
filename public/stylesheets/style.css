@@ -1,0 +1,293 @@
+html,body {
+	height: 100%;
+}
+
+
+nav.navbar.navbar-light.navbar-expand-md .container-fluid {
+	padding-left: 30px;
+}
+
+.link {
+	color: rgba(142,147,115,1);
+}
+
+/* Product page */
+
+body.my-product-page {
+	color: rgba(142,147,115,1);
+}
+    
+/* Log-in page */
+body.my-login-page {
+	background-image: url("/images/login/background.jpg");
+	background-color: rgba(142,147,115,1);
+	background-size: cover;
+	background-blend-mode: multiply;
+	font-size: 14px;
+	font-family: brandon-grotesque,sans-serif;
+}
+
+
+.my-login-page .brand {
+	width: 60px;
+	height: 60px;
+	margin: 20px auto;
+	/* box-shadow: 0 4px 8px rgba(0,0,0,.05); */
+	/* border-radius: 50%; */
+	position: relative;
+	z-index: 1;
+	/* overflow: hidden; */
+}
+
+.my-login-page .brand img {
+	width: 100%;
+}
+
+.my-login-page .card-wrapper {
+	width: 400px;
+}
+
+.my-login-page .card {
+	border-color: transparent;
+	box-shadow: 0 4px 8px rgba(0,0,0,.05);
+}
+
+.my-login-page .card.fat {
+	padding: 10px;
+	border-radius: 16px;
+}
+
+.my-login-page .card .card-title {
+	margin-bottom: 30px;
+}
+
+.my-login-page .form-control {
+	border-width: 2px;
+}
+
+.my-login-page .form-group label {
+	width: 100%;
+}
+
+.my-login-page .btn.btn-block {
+	background-color: rgba(142,147,115,1);
+	color: white;
+	padding: 12px 10px;
+}
+
+.my-login-page .footer {
+	margin: 40px 0;
+	color: rgb(255, 255, 255);
+	text-align: center;
+}
+
+
+
+/* Home page */
+.my-home-page {
+	font-family: brandon-grotesque,sans-serif;
+}
+
+.my-home-page .web-header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	margin: 0;
+	justify-items: start;
+}
+
+.my-home-page .web-header a {
+	color: #bac5c4;
+	/* padding-left: 10px;
+	padding-right: 10px; */
+	text-decoration: none;
+}
+
+.my-home-page .web-header a:hover{
+	color: whitesmoke;
+	text-decoration: none;
+}
+
+
+.my-home-page img {
+	width: 100%;
+	height: 100%;
+}
+
+
+.my-home-page .container-fluid {
+	padding: 0;
+	margin: 0;
+	height: fit-content;
+	position: relative;
+}
+
+.my-home-page .statements {
+	font-size: 16px;
+	height: fit-content;
+	width: 75%;
+	color:#828887;
+	padding-left: 15%;
+	padding-bottom: 100px;
+	padding-top: 20px;
+} 
+
+.my-home-page #our-product {
+	/*margin-top: 50px;*/
+	padding-bottom: 40px;
+	font-family: castlerocks;
+	font-size: 60px;
+	color: white;
+  }
+  
+.my-home-page .product {
+	border-top-right-radius: 45%;
+	border-top-left-radius: 45%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	height: 370px;
+	width: 300px;
+	/* grid-area: 1/ 2/ 1/ 2; */
+  }
+  
+.my-home-page .product-name {
+	color: white;
+	margin-top: 16px;
+	font-size: 24px;
+  }
+
+.my-list-prod {
+	padding: 30px;
+}
+
+@media screen and (max-width: 425px) {
+	.my-login-page .card-wrapper {
+		width: 90%;
+		margin: 0 auto;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	.my-login-page .card.fat {
+		padding: 0;
+	}
+
+	.my-login-page .card.fat .card-body {
+		padding: 15px;
+	}
+
+	
+}
+
+@media screen and (min-width: 1024px) {
+	.my-home-page .web-header {
+		font-size: 24px;
+		padding: 20px;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.my-home-page .web-header {
+		font-size: 18px;
+		padding: 10px;
+	}
+	.my-home-page .statements {
+		padding-top: 75px;
+	}
+	
+	.large-about-text {
+		top: 60%; 
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.large-about-text {
+		top: 53%; 
+	}
+}
+
+/* shared */
+.rounded-img{
+	border-radius: 50%; 
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	height: 300px;
+	width: 300px;
+	grid-area: 1/ 2/ 1/ 2;
+}  
+  
+.large-about-text{
+	font-size: 45px;
+	color: #828887;
+	font-weight: bold;
+	position: absolute; 
+	top: 50%; 
+	left: 15%;
+}
+
+.large-contact-text {
+	font-size: 45px;
+	color: white;
+	font-weight: bold;
+	text-align: center;
+}
+
+
+.half-circle {
+	width: 300px;
+	height: 300px;
+	border-radius: 150px;
+	-webkit-border-radius: 150px;
+    -moz-border-radius: 150px;
+	border-width: 2px;
+	border-color: #828887;
+	border-style: solid;
+	justify-self: end;
+	grid-area: 1/ 2/ 1/ 2;
+}
+
+/*
+Use in drop down menu
+*/
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+.dropdown-content {
+	border-radius: 8px;
+	display: none;
+	position: absolute;
+	background-color: #f1f1f1;
+	min-width: max-content;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	z-index: 10;
+}
+
+.dropdown-content a {
+	color: black;
+	padding: 12px 12px;
+	text-decoration: none;
+	display: block;
+}
+
+.dropdown-content a:hover {
+	background-color: rgb(197, 206, 204);
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+.dropdown.nav-link a {
+	text-decoration: none;
+	color: rgb(115,115,115);
+}
+
+.dropdown.nav-link a:hover {
+	color: black;
+	cursor: pointer;
+}

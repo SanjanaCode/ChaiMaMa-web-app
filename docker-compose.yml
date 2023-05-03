@@ -1,0 +1,64 @@
+version: '3.7'
+services:
+    node:
+        build:
+            context: ./
+            dockerfile: Dockerfile
+        image: node-app
+        environment:
+            DB_SERVER: cosc304-db
+            DB_NAME: tempdb
+            DB_USER: SA
+            DB_PASSWORD: 'YourStrong@Passw0rd'
+            REDIS_URL: redis://redis-store:6379
+            SESSION_SECRET: 'ChaiM8M8'
+            NODE_ENV: dev
+        depends_on:
+            - db
+            - redis
+        container_name: node-app
+        volumes:
+            - ./:/app/
+            - /app/node_modules
+        networks:
+            node-network:
+                aliases:
+                    - node-app
+        ports:
+            - 80:3000
+    db:
+        image: mcr.microsoft.com/mssql/server:2019-latest
+        container_name: mssql
+        restart: always
+        environment:
+            ACCEPT_EULA: 'Y'
+            SA_PASSWORD: 'YourStrong@Passw0rd'
+        ports:
+            - '1433:1433'
+        expose:
+            - '1433'
+        volumes:
+            - cosc304-db:/var/opt/mssql
+        networks:
+            node-network:
+                aliases:
+                    - cosc304-db
+    redis:
+        image: redis:latest
+        container_name: redis
+        restart: always
+        ports:
+            - '6379:6379'
+        expose:
+            - '6379'
+        volumes:
+            - redis-data:/data
+        networks:
+            node-network:
+                aliases:
+                    - redis-store
+volumes:
+    cosc304-db: null
+    redis-data: null
+networks:
+    node-network: null

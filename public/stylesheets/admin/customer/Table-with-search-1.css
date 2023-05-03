@@ -1,0 +1,21 @@
+
+.results tr[visible='false'], .no-result {
+  display: none;
+}
+
+.results tr[visible='true'] {
+  display: table-row;
+}
+
+.highlight{
+
+  border-radius: 10%;
+  background-color: rgba(193, 207, 114, 0.5);
+
+}
+
+.counter {
+  padding: 8px;
+  color: #ccc;
+}
+

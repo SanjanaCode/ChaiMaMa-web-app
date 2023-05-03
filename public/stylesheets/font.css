@@ -1,0 +1,20 @@
+@font-face {
+	font-family: 'CASTLE ROCKS';
+	src: url(/fonts/CASTLE_ROCKS_Regular.ttf) format('ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'brandon-grotesque';
+	src: url(/fonts/Brandon_bld.otf) format('otf');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'brandon-grotesque';
+	src: url(/fonts/Brandon_light.otf) format('otf');
+	font-weight: normal;
+	font-style: normal;
+}

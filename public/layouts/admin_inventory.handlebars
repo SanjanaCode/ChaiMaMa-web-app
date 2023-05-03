@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Admin Portal - Inventory</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="/stylesheets/admin/customer/Table-with-search-1.css">
+    <link rel="stylesheet" href="/stylesheets/admin/customer/Tamplate-SB-Admin-on-BSS.css">
+</head>
+
+<body>
+    <div>
+        <nav class="navbar navbar-dark navbar-expand sb-topnav" style="background-color: rgba(142,147,115,1);">
+            <div class="container-fluid">
+                <div class="navbar-brand">
+                    <svg id='logo' viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg" width="28px">
+                        <path
+                            d="M7.8095 20.9911C7.8095 12.5848 15.2432 5.48451 25.9194 4.44997C27.846 4.26327 29.1218 2.86693 30.7606 2.50395C33.4216 1.91457 31.1331 1.76475 30.0434 2.47615C27.5775 4.08589 27.82 8.8239 27.82 11.4834C27.82 17.5778 24.7152 20.2529 16.8106 21.0189C13.4102 21.3484 9.45157 22.6191 6.5185 23.8823C2.4938 25.6157 2 28.6389 2 32"
+                            stroke="#bac5c4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    &nbsp;ChaiMaMa
+                </div>
+                <ul class="navbar-nav d-flex order-3 ms-auto ml-md-0">
+                    <li class="nav-item d-flex justify-content-center align-items-center">
+                        <div class="nav-item dropdown no-arrow">
+                            <a class="dropdown-toggle active" aria-expanded="false" data-bs-toggle="dropdown"
+                                href="#">&nbsp;<img class="rounded-circle" src="/images/logo.jpg"
+                                    style="width: 40px;border-width: 2px;border-style: solid;"></a>
+                            <div class="dropdown-menu dropdown-menu-end text-start" style="margin-top: 16px;">
+                                <a class="dropdown-item" href="/logout">Log out</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <div id="sidenavAccordion" class="sb-sidenav accordion sb-sidenav-dark">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <div>
+                                <a class="nav-link" href="/admin/customer">
+                                    <div class="sb-nav-link-icon">
+                                        <i class="far fa-user"></i>
+                                    </div>
+                                    <span>Customers</span>
+                                </a>
+                            </div>
+                            <div>
+                                <a class="nav-link" href="/admin/orders">
+                                    <div class="sb-nav-link-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                            viewBox="0 0 24 24" fill="none">
+                                            <path
+                                                d="M9 5H7C5.89543 5 5 5.89543 5 7V19C5 20.1046 5.89543 21 7 21H17C18.1046 21 19 20.1046 19 19V7C19 5.89543 18.1046 5 17 5H15M9 5C9 6.10457 9.89543 7 11 7H13C14.1046 7 15 6.10457 15 5M9 5C9 3.89543 9.89543 3 11 3H13C14.1046 3 15 3.89543 15 5M12 12H15M12 16H15M9 12H9.01M9 16H9.01"
+                                                stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round"></path>
+                                        </svg>
+                                    </div>
+                                    <span>Orders</span>
+                                </a>
+                            </div>
+                            <div>
+                                <a class="nav-link" href="/admin/products">
+                                    <div class="sb-nav-link-icon">
+                                        <i class="icon ion-ios-box"></i>
+                                    </div>
+                                    <span>Products</span>
+                                </a>
+                            </div>
+                            <div>
+                                <a class="nav-link" href="/admin/shipment">
+                                    <div class="sb-nav-link-icon">
+                                        <i class="fas fa-shipping-fast"></i>
+                                    </div>
+                                    <span>Shipments</span>
+                                </a>
+                            </div>
+                            <div>
+                                <a class="nav-link active" href="/admin/inventory">
+                                    <div class="sb-nav-link-icon">
+                                        <i class="fas fa-warehouse"></i>
+                                    </div>
+                                    <span>Inventory</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="layoutSidenav_content" style="align-items: self-center;">
+                <main>
+                    <div class="form-group pull-right">
+                        <input type="text" class="search form-control" placeholder="What you looking for?">
+                    </div>
+                    <span class="counter pull-right"></span>
+                    <table class="table table-hover table-bordered results">
+                        <thead>
+                            <tr>
+                                <th class="col-md-1 col-xs-1">Product Id</th>
+                                <th class="col-md-2 col-xs-2">Quantity Available</th>
+                                <th class="col-md-3 col-xs-3">Warehouse Id</th>
+                                <th class="col-md-4 col-xs-4">Warehouse Name</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{{warehouses}}}
+                        </tbody>
+                    </table>
+                </main>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="http://johannburkard.de/resources/Johann/jquery.highlight-5.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/Table-with-search.js"></script>
+</body>
+
+</html>

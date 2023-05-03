@@ -1,0 +1,160 @@
+body {
+  font-family: brandon-grotesque,sans-serif;
+  height: 100%;
+}
+
+
+.far:hover {
+  cursor: pointer;
+}
+
+.far span{
+  font-family: brandon-grotesque,sans-serif;
+  color: black;
+}
+
+
+.form-control {
+  border: 1px solid #cfd1d8;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  font-size: 16px;
+  background: #ffffff;
+  color: #2e323c;
+  width: 100%;
+}
+
+.info-section {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+
+.edit-buttons .btn{
+  border-radius: 10px;
+  float: right !important;
+  margin-left: 10px;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.edit-buttons .btn.btn-primary {
+  background-color: #828887;
+  border-color: #828887;
+}
+
+.card {
+  background: #ffffff;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border: 0;
+  margin-bottom: 1rem;
+}
+
+.card-body {
+  padding: 0;
+}
+
+.list-group {
+  padding-top: 16px;
+}
+
+
+/* Sidebar tab */
+.list-group-item.tab{
+  background-color: #ffffff;
+  color: rgb(120, 120, 120);
+  cursor: pointer;
+}
+
+/**
+ * Sidebar hovered tab
+ */
+.list-group-item.tab :hover{
+  text-decoration: underline;
+}
+
+/* Selected tab */
+.list-group-item.tab.active {
+  background-color: #828887;
+  border-color: #828887;
+  color: #ffffff;
+}
+
+.content-view {
+  padding-top: 16px;
+}
+
+.order-item {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.order-header {
+  align-items: flex-start;
+  background: rgb(240,242,242);
+  font-size: 12px;
+  padding: 8px 0px 8px 0px;
+  margin: 0;
+  border-radius: 8px 8px 0px 0px;
+}
+
+.order-header .title, .order-list-item .title {
+  font-weight: 400;
+  color: #8f8f91;
+}
+
+.order-header .value {
+  font-weight: 500;
+  color: #404041;
+  font-size: 14px;
+}
+
+.order-list{
+  border: rgb(240,242,242);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 0px 0px 8px 8px;
+}
+
+
+.order-list-item {
+  margin: 0;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  font-size: 16px;
+  align-items: flex-start;
+}
+
+.row.order-list-item div[class^="col-"] {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+
+.row.order-list-item .product-name {
+  font-weight: 600;
+}
+
+/**
+ * Link tag parent of product-name
+ */
+.row.order-list-item a {
+  text-decoration: none;
+  color: rgb(0, 102, 120)
+}
+
+.row.order-list-item a:hover {
+  text-decoration: none;
+  color: rgb(214, 151, 140)
+}
+
+.row.order-list-item .quantity {
+  text-align: center;
+}
+
+
+
+
